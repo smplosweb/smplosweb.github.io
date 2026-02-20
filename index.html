@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>smplOS - A simple OS that just works</title>
+  <meta name="description" content="smplOS is a minimal Arch Linux distro. Lightweight, offline-first, cross-compositor. Under 800 MB RAM on a cold boot.">
+  <meta property="og:title" content="smplOS - A simple OS that just works">
+  <meta property="og:description" content="Minimal Arch Linux distro. Lightweight, offline-first, cross-compositor. Under 800 MB RAM.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-preview.png">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="images/logo.png" alt="smplOS" height="32">
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#editions">Editions</a>
+        <a href="#download" class="btn-nav">Download</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Story -->
+  <section class="story">
+    <div class="section-inner">
+      <div class="story-content">
+        <h2>Why we built this</h2>
+        <p>
+          We loved Omarchy &mdash; the keybindings, the workflow,
+          the idea of a curated Arch desktop. But we wanted something leaner. Fewer packages,
+          lower memory footprint, support for more than one compositor.
+          We tried to contribute those changes upstream, but the project has a different vision:
+          it's a personal setup built for one person's preferences, and that's totally fair.
+          So we forked, rewrote most of the stack, and built smplOS.
+        </p>
+        <p>
+          What started as a trim-down turned into something new.
+          We wrote a suite of <a href="#apps">native GUI apps in Rust</a> &mdash;
+          a notification center, display manager, keyboard manager, webapp creator &mdash;
+          each under 5 MB, starting in milliseconds. No Electron, no GTK monoliths.
+          Tiling WM users have gone without these tools for years because the only options
+          were heavy desktop-environment panels. Now they're lightweight, theme-aware,
+          and work on both X11 and Wayland.
+        </p>
+        <p>
+          We built a <a href="#editions">modular edition system</a> &mdash;
+          productivity, creators, communication, development, AI &mdash;
+          that stacks cleanly on top of a minimal base. Adding a new edition is just
+          a package list and a post-install script, not a fork of the entire OS.
+          The base idles under 800 MB of RAM, but you can stack every edition and still
+          have a lighter system than most mainstream distros.
+        </p>
+        <p>
+          You can spin up <a href="#features">sandboxed web apps</a> on the fly &mdash;
+          any website becomes an isolated app with its own window, its own profile,
+          and no access to your main browser data.
+          There's a 14-theme system that recolors every app on the desktop with one command.
+          A suckless terminal patched for inline images at a fraction of Kitty's memory.
+          Offline-first installation &mdash; no internet, under 2 minutes.
+          Cross-compositor architecture so the same configs, themes, and keybindings
+          work across Hyprland (Wayland) and DWM (X11).
+        </p>
+        <p>
+          Same muscle memory as Omarchy. Different philosophy.
+          Minimal by design, not by accident.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>A simple OS<br>that just works.</h1>
+      <p class="hero-sub">
+        Minimal Arch Linux distro. Under 800 MB of RAM on a cold boot.
+        Fully offline install in under 2 minutes. 14 built-in themes.
+        No bloat, no compromises.
+      </p>
+      <div class="hero-actions">
+        <a href="#download" class="btn btn-primary">Download ISO</a>
+        <a href="https://github.com/KonTy/smplos" class="btn btn-secondary">Source Code</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-value">&lt; 800 MB</span>
+          <span class="stat-label">RAM at idle</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">&lt; 2 min</span>
+          <span class="stat-label">Install time</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">14</span>
+          <span class="stat-label">Built-in themes</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">0</span>
+          <span class="stat-label">Internet required</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <div class="section-inner">
+      <h2>Why smplOS?</h2>
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">&#xf0e7;</div>
+          <h3>Lightweight</h3>
+          <p>Under 800 MB of RAM on a cold boot with the full desktop running &mdash; bar, notifications, compositor, and all background services. Light enough for a 2 GB VM, comfortable enough for daily driving.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">&#xf019;</div>
+          <h3>Offline-first</h3>
+          <p>The ISO carries every package. No internet needed during install. A fresh install completes in under 2 minutes on any hardware. Plug in, boot, done.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">&#xf26c;</div>
+          <h3>Cross-compositor</h3>
+          <p>Built from the ground up for multiple compositors. Hyprland (Wayland) ships first, DWM (X11) is next. Shared configs, shared themes, shared keybindings &mdash; the compositor is just a thin layer.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">&#xf53f;</div>
+          <h3>One UI toolkit</h3>
+          <p>EWW powers the bar, widgets, and dialogs. It runs on both X11 and Wayland. No waybar, no polybar, no redundant tools. One codebase for everything.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">&#xf1fc;</div>
+          <h3>14 themes</h3>
+          <p>One command switches colors across the entire system &mdash; terminal, bar, notifications, borders, lock screen, btop, neovim, and VS Code. Every theme includes matching wallpapers.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">&#xf121;</div>
+          <h3>Sandboxed web apps</h3>
+          <p>Turn any website into an isolated app with its own window, profile, and sandbox &mdash; no access to your main browser data. Create them on the fly from a GUI or the command line. Chat apps, dashboards, anything.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Rust Apps -->
+  <section id="apps" class="apps">
+    <div class="section-inner">
+      <h2>Built-in Rust Apps</h2>
+      <p class="section-sub">
+        Tiling WM users have gone without graphical settings panels for years.
+        The only options were Electron wrappers or full GNOME/KDE panels.
+        So we wrote our own &mdash; native Rust + Slint, each under 5 MB, starting in milliseconds.
+      </p>
+      <div class="app-grid">
+
+        <div class="app-card">
+          <a href="images/3-notif-center.png" target="_blank">
+            <img src="images/3-notif-center.png" alt="Notification Center" loading="lazy">
+          </a>
+          <div class="app-info">
+            <h3>Notification Center</h3>
+            <p>Groups desktop notifications by app with dismiss, clear-all, and scrollable history. Integrates with Dunst over D-Bus. Double-click to launch the source app. Idles at under 10 MB of RAM.</p>
+          </div>
+        </div>
+
+        <div class="app-card">
+          <a href="images/7-displaymgr.png" target="_blank">
+            <img src="images/7-displaymgr.png" alt="Display Manager" loading="lazy">
+          </a>
+          <div class="app-info">
+            <h3>Display Manager</h3>
+            <p>Detects connected monitors, shows resolution, refresh rate, scale, and position. Apply changes live &mdash; no CLI, no config file editing. Just <code>hyprctl</code> under the hood.</p>
+          </div>
+        </div>
+
+        <div class="app-card">
+          <a href="images/8-keyboard.png" target="_blank">
+            <img src="images/8-keyboard.png" alt="Keyboard Manager" loading="lazy">
+          </a>
+          <div class="app-info">
+            <h3>Keyboard Manager</h3>
+            <p>Add and remove keyboard layouts, toggle NumLock, adjust repeat rate and delay &mdash; all applied live. Previously this required hand-editing config files and reloading the compositor.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section id="screenshots" class="screenshots">
+    <div class="section-inner">
+      <h2>Screenshots</h2>
+      <p class="section-sub">Click any image to view full size.</p>
+      <div class="screenshot-grid">
+        <a href="images/1-start-menu.png" class="screenshot-card" target="_blank">
+          <img src="images/1-start-menu.png" alt="Start Menu" loading="lazy">
+          <span>Start Menu</span>
+        </a>
+        <a href="images/2-mem.png" class="screenshot-card" target="_blank">
+          <img src="images/2-mem.png" alt="Memory Footprint" loading="lazy">
+          <span>Memory Footprint</span>
+        </a>
+        <a href="images/3-notif-center.png" class="screenshot-card" target="_blank">
+          <img src="images/3-notif-center.png" alt="Notification Center" loading="lazy">
+          <span>Notification Center</span>
+        </a>
+        <a href="images/4.term.png" class="screenshot-card" target="_blank">
+          <img src="images/4.term.png" alt="Terminal (st-wl)" loading="lazy">
+          <span>Terminal (st-wl)</span>
+        </a>
+        <a href="images/5-themes.png" class="screenshot-card" target="_blank">
+          <img src="images/5-themes.png" alt="Theme Picker" loading="lazy">
+          <span>Themes</span>
+        </a>
+        <a href="images/6-keybindings.png" class="screenshot-card" target="_blank">
+          <img src="images/6-keybindings.png" alt="Keybinding Help" loading="lazy">
+          <span>Keybinding Help</span>
+        </a>
+        <a href="images/7-displaymgr.png" class="screenshot-card" target="_blank">
+          <img src="images/7-displaymgr.png" alt="Display Manager" loading="lazy">
+          <span>Display Manager</span>
+        </a>
+        <a href="images/8-keyboard.png" class="screenshot-card" target="_blank">
+          <img src="images/8-keyboard.png" alt="Keyboard Manager" loading="lazy">
+          <span>Keyboard Manager</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editions -->
+  <section id="editions" class="editions">
+    <div class="section-inner">
+      <h2>Editions</h2>
+      <p class="section-sub">Focused editions that stack on top of each other. Pick the ones you need.</p>
+      <div class="edition-grid">
+        <div class="edition-card">
+          <div class="edition-flag">Base</div>
+          <p>Browser, terminal, file manager. The essentials.</p>
+        </div>
+        <div class="edition-card">
+          <div class="edition-flag">Productivity</div>
+          <p>Logseq, LibreOffice, KeePassXC. Office and workflow.</p>
+        </div>
+        <div class="edition-card">
+          <div class="edition-flag">Creators</div>
+          <p>OBS, Kdenlive, GIMP. Design and media production.</p>
+        </div>
+        <div class="edition-card">
+          <div class="edition-flag">Communication</div>
+          <p>Discord, Signal, Slack. Chat and calls.</p>
+        </div>
+        <div class="edition-card">
+          <div class="edition-flag">Development</div>
+          <p>VSCode, LazyVim, lazygit. Developer tools.</p>
+        </div>
+        <div class="edition-card">
+          <div class="edition-flag">AI</div>
+          <p>Ollama, Open WebUI. Local AI tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Keybindings -->
+  <section class="keybindings">
+    <div class="section-inner">
+      <h2>Getting Started</h2>
+      <p class="section-sub">Familiar keybindings. Press Super+K anytime to see them all.</p>
+      <div class="kb-table-wrap">
+        <table>
+          <tbody>
+            <tr><td><kbd>Super</kbd></td><td>Start menu</td></tr>
+            <tr><td><kbd>Super</kbd>+<kbd>Enter</kbd></td><td>Terminal</td></tr>
+            <tr><td><kbd>Super</kbd>+<kbd>Space</kbd></td><td>App launcher</td></tr>
+            <tr><td><kbd>Super</kbd>+<kbd>W</kbd></td><td>Close window</td></tr>
+            <tr><td><kbd>Super</kbd>+<kbd>F</kbd></td><td>Fullscreen</td></tr>
+            <tr><td><kbd>Super</kbd>+<kbd>T</kbd></td><td>Toggle floating</td></tr>
+            <tr><td><kbd>Super</kbd>+<kbd>1-9</kbd></td><td>Switch workspace</td></tr>
+            <tr><td><kbd>Super</kbd>+<kbd>K</kbd></td><td>Keybinding cheatsheet</td></tr>
+            <tr><td><kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd></td><td>File manager</td></tr>
+            <tr><td><kbd>Super</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd></td><td>Web browser</td></tr>
+            <tr><td><kbd>Print</kbd></td><td>Screenshot</td></tr>
+            <tr><td><kbd>Super</kbd>+<kbd>Escape</kbd></td><td>Power menu</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section id="download" class="download">
+    <div class="section-inner">
+      <h2>Download</h2>
+      <div class="download-card">
+        <div class="download-info">
+          <h3>smplOS 2026.02</h3>
+          <p>Hyprland (Wayland) &bull; x86_64 &bull; ~7 GB ISO</p>
+          <ul class="download-details">
+            <li>Includes all editions (base + productivity + creators + communication + dev + AI)</li>
+            <li>Fully offline install &mdash; no internet required</li>
+            <li>Write to USB with <code>dd</code>, Ventoy, Rufus, or Etcher</li>
+          </ul>
+        </div>
+        <div class="download-actions">
+          <a href="#" class="btn btn-primary btn-lg" id="download-link">
+            Download ISO
+          </a>
+          <p class="download-hash">
+            SHA256: <code>coming soon</code>
+          </p>
+        </div>
+      </div>
+      <div class="download-note">
+        <p>
+          <strong>Flash to USB:</strong>
+          <code>sudo dd if=smplos-2026.02-x86_64.iso of=/dev/sdX bs=4M status=progress oflag=sync</code>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="section-inner">
+      <p>smplOS is free and open source software licensed under the MIT License.</p>
+      <div class="footer-links">
+        <a href="https://github.com/KonTy/smplos">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
