@@ -331,29 +331,47 @@
   <section id="download" class="download">
     <div class="section-inner">
       <h2>Download</h2>
+
       <div class="download-card">
         <div class="download-info">
-          <h3>smplOS 2026.03</h3>
-          <p>Hyprland (Wayland) &bull; x86_64 &bull; ~10 GB ISO</p>
+          <h3>smplOS Full &mdash; 2026.03</h3>
+          <p>Hyprland (Wayland) &bull; x86_64 &bull; 9.3 GB</p>
           <ul class="download-details">
-            <li>Includes all editions (base + productivity + creators + communication + dev + AI)</li>
+            <li><strong>Everything included:</strong> base desktop + productivity (Logseq, LibreOffice, KeePassXC) + creators (OBS, Kdenlive, GIMP) + communication (Discord, Signal) + development (VSCode, LazyVim) + AI (Ollama, Open WebUI)</li>
             <li>Fully offline install &mdash; no internet required</li>
             <li>Write to USB with <code>dd</code>, Ventoy, Rufus, or Etcher</li>
           </ul>
         </div>
         <div class="download-actions">
-          <a href="#" class="btn btn-primary btn-lg" id="download-link">
-            Download ISO
+          <a href="https://archive.org/download/smplos-2026.03/smplos_pcmda_260312-2315.iso" class="btn btn-primary btn-lg">
+            Download Full ISO
           </a>
-          <p class="download-hash">
-            SHA256: <code>50191178753cc74a8951d18e0d8b7a6670cc71c661c103af1506ed0fdc2c7bf8</code>
-          </p>
+          <p class="download-hash">SHA256: <code>50191178753cc74a8951d18e0d8b7a6670cc71c661c103af1506ed0fdc2c7bf8</code></p>
         </div>
       </div>
+
+      <div class="download-card" style="margin-top:1.5rem">
+        <div class="download-info">
+          <h3>smplOS Base &mdash; 2026.03</h3>
+          <p>Hyprland (Wayland) &bull; x86_64 &bull; 7.6 GB</p>
+          <ul class="download-details">
+            <li><strong>Minimal desktop:</strong> browser, terminal, file manager, and the full smplOS native app suite (start menu, notification center, display manager, keyboard manager)</li>
+            <li>Under 800 MB RAM at idle &mdash; ideal for older hardware or VMs</li>
+            <li>Fully offline install &mdash; no internet required</li>
+          </ul>
+        </div>
+        <div class="download-actions">
+          <a href="https://archive.org/download/smplos-base-2026.03/smplos_260313-0458.iso" class="btn btn-primary btn-lg">
+            Download Base ISO
+          </a>
+          <p class="download-hash">SHA256: <code>24b855231e865759a91d2d9ac46ea5babe374918ea995b8f4fd41dc32874fb99</code></p>
+        </div>
+      </div>
+
       <div class="download-note">
         <p>
           <strong>Flash to USB:</strong>
-          <code>sudo dd if=smplos_pcmda_260312-2315.iso of=/dev/sdX bs=4M status=progress oflag=sync</code>
+          <code>sudo dd if=smplos-2026.03.iso of=/dev/sdX bs=4M status=progress oflag=sync</code>
         </p>
       </div>
     </div>
