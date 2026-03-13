@@ -45,7 +45,7 @@
         <p>
           What started as a trim-down turned into something new.
           We wrote a suite of <a href="#apps">native GUI apps in Rust</a> &mdash;
-          a notification center, display manager, keyboard manager, webapp creator &mdash;
+          a start menu, notification center, app center, display manager, keyboard manager &mdash;
           each under 5 MB, starting in milliseconds. No Electron, no GTK monoliths.
           Tiling WM users have gone without these tools for years because the only options
           were heavy desktop-environment panels. Now they're lightweight, theme-aware,
@@ -88,7 +88,7 @@
       </p>
       <div class="hero-actions">
         <a href="#download" class="btn btn-primary">Download ISO</a>
-        <a href="https://github.com/KonTy/smplos" class="btn btn-secondary">Source Code</a>
+        <a href="https://github.com/smplosweb/smplos" class="btn btn-secondary">Source Code</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
@@ -150,7 +150,7 @@
         <div class="feature-card">
           <div class="feature-icon">&#xf121;</div>
           <h3>Sandboxed web apps</h3>
-          <p>Turn any website into an isolated app with its own window, profile, and sandbox &mdash; no access to your main browser data. Create them on the fly from a GUI or the command line. Chat apps, dashboards, anything.</p>
+          <p>Turn any website into an isolated app with its own window, profile, and sandbox &mdash; no access to your main browser data. Create and manage them from the built-in Web App Center. Chat apps, dashboards, anything.</p>
         </div>
 
       </div>
@@ -168,6 +168,29 @@
       </p>
       <div class="app-grid">
 
+        <div class="app-card">
+          <a href="images/1-start-menu.png" target="_blank">
+            <img src="images/1-start-menu.png" alt="Start Menu" loading="lazy">
+          </a>
+          <div class="app-info">
+            <h3>Start Menu</h3>
+            <p>Browse apps by category, search across all installed packages (AUR, Flatpak, AppImage, web apps), and access system settings. Full keyboard navigation. Theme-aware colors and border radius.</p>
+          </div>
+        </div>
+
+        <div class="app-card">
+          <div class="app-info" style="padding: 2rem;">
+            <h3>App Center</h3>
+            <p>Search and install apps from Flathub with a single click. Browse by category, see descriptions and download sizes, install or remove Flatpak apps without touching the terminal.</p>
+          </div>
+        </div>
+
+        <div class="app-card">
+          <div class="app-info" style="padding: 2rem;">
+            <h3>Web App Center</h3>
+            <p>Turn any website into a sandboxed app with its own window and browser profile. Manage VPN routing, secure mode, and delete apps you no longer need. All from one GUI.</p>
+          </div>
+        </div>
         <div class="app-card">
           <a href="images/3-notif-center.png" target="_blank">
             <img src="images/3-notif-center.png" alt="Notification Center" loading="lazy">
@@ -310,8 +333,8 @@
       <h2>Download</h2>
       <div class="download-card">
         <div class="download-info">
-          <h3>smplOS 2026.02</h3>
-          <p>Hyprland (Wayland) &bull; x86_64 &bull; ~7 GB ISO</p>
+          <h3>smplOS 2026.03</h3>
+          <p>Hyprland (Wayland) &bull; x86_64 &bull; ~10 GB ISO</p>
           <ul class="download-details">
             <li>Includes all editions (base + productivity + creators + communication + dev + AI)</li>
             <li>Fully offline install &mdash; no internet required</li>
@@ -323,14 +346,14 @@
             Download ISO
           </a>
           <p class="download-hash">
-            SHA256: <code>coming soon</code>
+            SHA256: <code>50191178753cc74a8951d18e0d8b7a6670cc71c661c103af1506ed0fdc2c7bf8</code>
           </p>
         </div>
       </div>
       <div class="download-note">
         <p>
           <strong>Flash to USB:</strong>
-          <code>sudo dd if=smplos-2026.02-x86_64.iso of=/dev/sdX bs=4M status=progress oflag=sync</code>
+          <code>sudo dd if=smplos_pcmda_260312-2315.iso of=/dev/sdX bs=4M status=progress oflag=sync</code>
         </p>
       </div>
     </div>
@@ -341,7 +364,7 @@
     <div class="section-inner">
       <p>smplOS is free and open source software licensed under the MIT License.</p>
       <div class="footer-links">
-        <a href="https://github.com/KonTy/smplos">GitHub</a>
+        <a href="https://github.com/smplosweb/smplos">GitHub</a>
       </div>
     </div>
   </footer>
